@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\http\RedirectResponse;
 use App\Models\Student;
 use Illuminate\View\View;
 
@@ -16,7 +16,7 @@ class StudentController extends Controller
     public function index(): View
     {
         $students = Student::All();
-        return view ('Student.index')->with('students', $students);
+        return view ('students.index')->with('students', $students);
     }
 
     /**

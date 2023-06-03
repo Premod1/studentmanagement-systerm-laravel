@@ -74,16 +74,15 @@ div.content {
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  
 </nav>
+</div> 
        </div>
        <div class='row'>
             <div class="col-md-3">
                 <!-- The sidebar -->
                 <div class="sidebar">
                   <a class="active" href="#home">Home</a>
-                  <a href="#news">Student</a>
+                  <a href="/students">Student</a>
                   <a href="#contact">Teacher</a>
                   <a href="#cource">Cources</a>
                   <a href="#about">Enrollment</a>
@@ -91,12 +90,12 @@ div.content {
                 </div>
             </div>
             <div class="col-md-9">
-                <div class="content">
+               
                     @yield('content')
-                </div>
+               
             </div>
        </div>
-         </div>
+         
     </div>
 </body>
 </html>

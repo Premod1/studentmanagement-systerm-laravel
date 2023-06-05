@@ -26,9 +26,9 @@
                     @foreach($courses as $item)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $courses->name }}</td>
-                            <td>{{ $courses->syllabus }}</td>
-                            <td>{{ $courses->duration }}</td>
+                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->syllabus }}</td>
+                            <td>{{ $item->duration }}</td>
 
                             <td>
                                 <a href="{{ url('/courses/' . $item->id) }}" title="View Course"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>

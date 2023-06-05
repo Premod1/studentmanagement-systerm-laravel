@@ -12,18 +12,18 @@ class CourseController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index():View
     {
-        $course = Course::all();
-        return view('course.index')->with('course', $course);
+        $courses = Course::all();
+        return view('courses.index')->with('courses', $courses);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create():View
     {
-        //
+        return view('courses.create');
     }
 
     /**
@@ -31,7 +31,9 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        Course::create($input);
+        return redirect('courses')->with('flash_message', 'Successfully');
     }
 
     /**
@@ -39,7 +41,8 @@ class CourseController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $courses = Course::find($id);
+        return view('courses.show')->with('courses', $courses);
     }
 
     /**

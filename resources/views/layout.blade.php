@@ -85,6 +85,7 @@ div.content {
                   <a href="{{ url('/students')}}">Student</a>
                   <a href="{{url('/teachers')}}">Teacher</a>
                   <a href="{{url('/courses')}}">Cources</a>
+                  <a href="{{url('/batches')}}">Batches</a>
                   <a href="{{url('/enrollment')}}">Enrollment</a>
                   <a href="{{url('/payments')}}">Payment</a>
                 </div>

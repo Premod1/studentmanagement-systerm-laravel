@@ -17,7 +17,7 @@ class EnrollmentController extends Controller
     public function index() :View
     {
         $enrollments = Enrollment::all();
-        return view('enrollments.indez')->with('enrollments', $enrollments);
+        return view('enrollments.index')->with('enrollments', $enrollments);
     }
 
     /**

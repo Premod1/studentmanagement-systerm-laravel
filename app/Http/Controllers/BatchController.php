@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Http\RedirectResponse;
 use App\Models\Batch;
+use App\Models\Course;
 use Illuminate\View\View;
 
 class BatchController extends Controller
@@ -24,6 +25,8 @@ class BatchController extends Controller
      */
     public function create() :View
     {
+        $courses = Course::pluck('name', 'id');
+        return view('batches.create', compact('courses'));
         return view('batches.create');
     }
 

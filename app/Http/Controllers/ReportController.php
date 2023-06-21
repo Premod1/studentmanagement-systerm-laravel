@@ -11,6 +11,7 @@ class ReportController extends Controller
 {
     public function report1($pid)
     {
+        //mewwatata template use karapn
         $payment = Payment::find($pid);
         $pdf = App::make('dompdf.wrapper');
 
@@ -19,7 +20,7 @@ class ReportController extends Controller
         $print.="<hr/>";
         $print.= "<p> Reciept No : <b>" . $pid ."</b></p>";
         $print.="<p> Date : <b> ". $payment->enrollment->enroll_no ." </b></p>";
-        $print.="<p> Date : <b> ". $payment->enrollment->student->name ." </b></p>";
+        $print.="<p> Date : <b> ". $payment->enrollment->student->name ." </b></p>"; 
 
         $print.= "<hr/>";
         $print.="<table style='width:100%;' >";
